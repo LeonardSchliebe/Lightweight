@@ -31,9 +31,20 @@ class AddExerciseViewModel: ObservableObject {
         }
         
         //Create a model
-        
+        let newId = UUID().uuidString
+        let newExercise = ExerciseItem(id: uId,
+                                       name: title,
+                                       set1: set1,
+                                       set2: set2,
+                                       set3: set3)
         // Save Model
         let db = Firestore.firestore()
+        
+        db.collection("users")
+            .document(uId)
+            .collection("workouts")
+            .document(newId)
+            .setData(newExercise.asDictionary())
         
         
         
