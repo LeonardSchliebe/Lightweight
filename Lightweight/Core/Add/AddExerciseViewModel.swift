@@ -31,7 +31,6 @@ class AddExerciseViewModel: ObservableObject {
         }
         
         //Create a model
-        let newId = UUID().uuidString
         let newExercise = ExerciseItem(id: uId,
                                        name: title,
                                        set1: set1,
@@ -42,8 +41,8 @@ class AddExerciseViewModel: ObservableObject {
         
         db.collection("users")
             .document(uId)
-            .collection("workouts")
-            .document(newId)
+            .collection("Workout 1")
+            .document(title)
             .setData(newExercise.asDictionary())
         
         
