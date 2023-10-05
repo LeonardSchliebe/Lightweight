@@ -6,9 +6,17 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseFirestoreSwift
 
 struct Add: View {
     @StateObject var viewModel = AddViewModel()
+    @FirestoreQuery var exercises: [ExerciseItem]
+    
+    init(userId: String) {
+        self._exercises = FirestoreQuery(
+            collectionPath: "users/\(userId)/Workout 1")
+    }
     var body: some View {
         
         ZStack {
@@ -36,7 +44,15 @@ struct Add: View {
                     .font(.largeTitle)
                     
                     
-                    //grid view of workout
+                    VStack {
+                        ForEach(exercises) { exercise in
+                            DisplayExercise(name: exercise.name, Set1: exercise.set1, Set2: exercise.set2, Set3: exercise.set3)
+                        }
+                    }
+                    .padding(.vertical)
+                    
+                    
+                    
                     
 
                     Button {
@@ -68,6 +84,6 @@ struct Add: View {
 
 struct Add_Previews: PreviewProvider {
     static var previews: some View {
-        Add()
+        Add(userId: "2GmwqX33EOezLiAoPYG1qaGQ9Ar2")
     }
 }

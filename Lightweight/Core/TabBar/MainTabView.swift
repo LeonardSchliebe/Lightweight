@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseFirestore
 
 struct MainTabView: View {
     
     @Binding var showSignInView: Bool
+    
     
     var body: some View {
         TabView{
@@ -19,7 +22,7 @@ struct MainTabView: View {
                     Text("Home")
                 }
 
-            Add()
+            Add(userId: "2GmwqX33EOezLiAoPYG1qaGQ9Ar2")
                 .tabItem{
                     Image(systemName: "plus.app")
                     Text("Add")

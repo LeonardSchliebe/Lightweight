@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8F4C30332ACC85F900A4ADDD /* ExerciseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C30322ACC85F900A4ADDD /* ExerciseItem.swift */; };
 		8F4C30352ACC8AA600A4ADDD /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C30342ACC8AA600A4ADDD /* Extension.swift */; };
+		8F818F532ACF1DB800202EDC /* DisplayExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F818F522ACF1DB800202EDC /* DisplayExercise.swift */; };
 		D7DD576F2ACB553600685F30 /* LightweightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD576E2ACB553600685F30 /* LightweightApp.swift */; };
 		D7DD57762ACB553D00685F30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DD57752ACB553D00685F30 /* Preview Assets.xcassets */; };
 		D7DD577D2ACB55A200685F30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7DD577C2ACB55A100685F30 /* GoogleService-Info.plist */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		8F4C30322ACC85F900A4ADDD /* ExerciseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseItem.swift; sourceTree = "<group>"; };
 		8F4C30342ACC8AA600A4ADDD /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		8F818F522ACF1DB800202EDC /* DisplayExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayExercise.swift; sourceTree = "<group>"; };
 		D7DD576B2ACB553600685F30 /* Lightweight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lightweight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DD576E2ACB553600685F30 /* LightweightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightweightApp.swift; sourceTree = "<group>"; };
 		D7DD57752ACB553D00685F30 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				D7DD57912ACB576000685F30 /* UserStatView.swift */,
 				D7DD578D2ACB575F00685F30 /* WorkoutStatView.swift */,
 				8F4C30342ACC8AA600A4ADDD /* Extension.swift */,
+				8F818F522ACF1DB800202EDC /* DisplayExercise.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				D7DD57A82ACB57FF00685F30 /* SettingsView.swift in Sources */,
 				D7DD579D2ACB57B900685F30 /* AuthenticationView.swift in Sources */,
 				8F4C30352ACC8AA600A4ADDD /* Extension.swift in Sources */,
+				8F818F532ACF1DB800202EDC /* DisplayExercise.swift in Sources */,
 				D7DD57A52ACB57F200685F30 /* Add.swift in Sources */,
 				D7DD57992ACB57A000685F30 /* AddExercise.swift in Sources */,
 				D7DD577F2ACB55E700685F30 /* RootView.swift in Sources */,
