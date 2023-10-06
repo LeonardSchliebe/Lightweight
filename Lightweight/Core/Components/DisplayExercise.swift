@@ -9,14 +9,11 @@ import SwiftUI
 
 struct DisplayExercise: View {
     
-    let name : String
-    let Set1 : String
-    let Set2 : String
-    let Set3 : String
-    
+    let item: ExerciseItem
+        
     var body: some View {
         VStack {
-            Text(name)
+            Text(item.name)
                 .font(.headline)
                 .frame(maxWidth: .infinity,
                        alignment: .leading)
@@ -26,7 +23,7 @@ struct DisplayExercise: View {
                     Rectangle()
                         .foregroundColor(Color("Accent"))
                         .cornerRadius(10)
-                    Text(Set1)
+                    Text(item.set1)
                         .padding(.vertical)
                       
                 }
@@ -34,7 +31,7 @@ struct DisplayExercise: View {
                     Rectangle()
                         .foregroundColor(Color("Accent"))
                         .cornerRadius(10)
-                    Text(Set2)
+                    Text(item.set2)
                         .padding(.vertical)
                       
                 }
@@ -42,7 +39,7 @@ struct DisplayExercise: View {
                     Rectangle()
                         .foregroundColor(Color("Accent"))
                         .cornerRadius(10)
-                    Text(Set3)
+                    Text(item.set3)
                         .padding(.vertical)
                       
                 }
@@ -54,9 +51,10 @@ struct DisplayExercise: View {
 
 struct DisplayExercise_Previews: PreviewProvider {
     static var previews: some View {
-        DisplayExercise(name: "Bench",
-                        Set1: "Set 1",
-                        Set2: "Set 2",
-                        Set3: "Set 3")
+        DisplayExercise(item: ExerciseItem(id: "",
+                                           name: "",
+                                           set1: "",
+                                           set2: "",
+                                           set3: ""))
     }
 }

@@ -44,17 +44,12 @@ struct Add: View {
                     .font(.largeTitle)
                     
                     
-                    VStack {
-                        ForEach(exercises) { exercise in
-                            DisplayExercise(name: exercise.name, Set1: exercise.set1, Set2: exercise.set2, Set3: exercise.set3)
-                        }
+                    ForEach(exercises) { exercise in
+                        DisplayExercise(item: exercise)
                     }
-                    .padding(.vertical)
                     
                     
                     
-                    
-
                     Button {
                         viewModel.showAddExercise = true
                     } label: {

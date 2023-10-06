@@ -22,6 +22,8 @@ class AddExerciseViewModel: ObservableObject {
     init() {}
     
     func save() {
+        let db = Firestore.firestore()
+        
         guard canSave else {
             return
         }
@@ -31,13 +33,13 @@ class AddExerciseViewModel: ObservableObject {
         }
         
         //Create a model
-        let newExercise = ExerciseItem(id: uId,
+        let newExercise = ExerciseItem(id: UUID().uuidString,
                                        name: title,
                                        set1: set1,
                                        set2: set2,
                                        set3: set3)
         // Save Model
-        let db = Firestore.firestore()
+        
         
         db.collection("users")
             .document(uId)
