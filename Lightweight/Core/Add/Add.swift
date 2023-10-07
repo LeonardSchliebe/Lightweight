@@ -12,6 +12,7 @@ import FirebaseFirestoreSwift
 struct Add: View {
     @StateObject var viewModel = AddViewModel()
     @FirestoreQuery var exercises: [ExerciseItem]
+    let screenWidth = UIScreen.main.bounds.size.width
     
     init(userId: String) {
         self._exercises = FirestoreQuery(
@@ -19,14 +20,14 @@ struct Add: View {
     }
     var body: some View {
         
-        ZStack {
-            Rectangle()
-                .foregroundColor(Color("Accent").opacity(0.8))
-                .cornerRadius(15)
-            ScrollView {
+        ScrollView {
+            ZStack {
+                Rectangle()
+                    .foregroundColor(Color("Accent").opacity(0.8))
+                    .cornerRadius(15)
                 VStack{
                     HStack{
-                        Text("Workout name")
+                        Text("Workout 1")
                             .fontWeight(.semibold)
                             .multilineTextAlignment(.leading)
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -43,37 +44,45 @@ struct Add: View {
                     .padding(.horizontal)
                     .font(.largeTitle)
                     
+                    Divider()
+                        .frame(width: screenWidth * 0.75, height: 4)
+                        .overlay(Color("Shadow"))
                     
                     ForEach(exercises) { exercise in
                         DisplayExercise(item: exercise)
                     }
                     
+                    Divider()
+                        .frame(width: screenWidth * 0.3, height: 4)
+                        .overlay(Color("Shadow"))
+                        .padding()
                     
-                    
-                    Button {
-                        viewModel.showAddExercise = true
-                    } label: {
-                        ZStack {
-                            Rectangle()
-                                .foregroundColor(Color("Accent"))
-                                .cornerRadius(10)
-                            Text("\(Image(systemName: "plus.square")) Exercise")
-                                .font(.title3)
-                                .fontWeight(.semibold)
-                                .foregroundColor(Color.black)
-                                .padding(.vertical)
+                    ScrollView {
+                        Button {
+                            viewModel.showAddExercise = true
+                        } label: {
+                            ZStack {
+                                Rectangle()
+                                    .foregroundColor(Color("Accent"))
+                                    .cornerRadius(10)
+                                Text("\(Image(systemName: "plus.square")) Exercise")
+                                    .font(.title3)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color.black)
+                                    .padding(.vertical)
+                            }
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
-                    }
-                    .sheet(isPresented: $viewModel.showAddExercise) {
-                        AddExercise(newItemPresented:
-                                        $viewModel.showAddExercise)
-                    }
+                        .sheet(isPresented: $viewModel.showAddExercise) {
+                            AddExercise(newItemPresented:
+                                            $viewModel.showAddExercise)
+                        }
+                    }.scrollDisabled(true)
                 }
                 .padding(.vertical)
             }
+            .padding([.leading, .bottom, .trailing])
         }
-        .padding([.leading, .bottom, .trailing])
     }
 }
 
