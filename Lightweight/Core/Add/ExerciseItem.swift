@@ -9,6 +9,7 @@ import Foundation
 
 struct ExerciseItem: Codable, Identifiable{
     let id: String
+    let date: TimeInterval
     let name: String
     let set1: String
     let set2: String

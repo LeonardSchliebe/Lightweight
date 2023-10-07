@@ -52,6 +52,7 @@ struct DisplayExercise: View {
 struct DisplayExercise_Previews: PreviewProvider {
     static var previews: some View {
         DisplayExercise(item: ExerciseItem(id: "",
+                                           date: Date().timeIntervalSince1970,
                                            name: "",
                                            set1: "",
                                            set2: "",
