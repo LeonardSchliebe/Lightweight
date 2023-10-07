@@ -11,10 +11,28 @@ final class signInEmailViewModel: ObservableObject {
     
     @Published var email = ""
     @Published var password = ""
+    @Published var showError = false
+    @Published var error = ""
     
     func signUp() async throws {
         guard !email.isEmpty, !password.isEmpty else {
             print("No email or Password")
+            showError = true
+            error = "Input email and password"
+            return
+        }
+        
+        guard email.contains("@") else {
+            print("Enter a valid email")
+            showError = true
+            error = "Enter a valid email"
+            return
+        }
+        
+        guard password.count>5 else {
+            print("Min. Password length is 5")
+            showError = true
+            error = "Minimum password length is 5"
             return
         }
         
@@ -70,6 +88,16 @@ struct AuthenticationView: View {
                 }
             } label: {
                 Text("Sign Up or Log In")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .frame(height: 55)
+                    .frame(maxWidth: .infinity)
+                    .background(Color("Accent"))
+                    .cornerRadius(10)
+            }
+            
+            if viewModel.showError {
+                Text(viewModel.error)
                     .font(.headline)
                     .foregroundColor(.white)
                     .frame(height: 55)
