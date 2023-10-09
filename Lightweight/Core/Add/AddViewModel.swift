@@ -9,6 +9,7 @@ import Foundation
 
 class AddViewModel: ObservableObject {
     @Published var showAddExercise = false
+    @Published var showAddWorkout = false
     
     init() {}
 }

@@ -44,7 +44,7 @@ class AddExerciseViewModel: ObservableObject {
         
         db.collection("users")
             .document(uId)
-            .collection("Workout 1")
+            .collection("Add Workout")
             .document(String(newExercise.date))
             .setData(newExercise.asDictionary())
         

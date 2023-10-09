@@ -16,7 +16,7 @@ struct Add: View {
     
     init(userId: String) {
         self._exercises = FirestoreQuery(
-            collectionPath: "users/\(userId)/Workout 1")
+            collectionPath: "users/\(userId)/Add Workout")
     }
     var body: some View {
         
@@ -27,14 +27,22 @@ struct Add: View {
                     .cornerRadius(15)
                 VStack{
                     HStack{
-                        Text("Workout 1")
+                        Text("Workout")
                             .fontWeight(.semibold)
                             .multilineTextAlignment(.leading)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         
                         HStack{
-                            Text("\(Image(systemName: "checkmark.circle"))")
-                                .fontWeight(.bold)
+                            Button {
+                                viewModel.showAddWorkout = true
+                            } label: {
+                                Text("\(Image(systemName: "checkmark.circle"))")
+                                    .fontWeight(.bold)
+                            }
+                            .sheet(isPresented: $viewModel.showAddWorkout){
+                                AddWorkout(AddWorkoutPresented: $viewModel.showAddWorkout)
+                            }
+
                             Text("\(Image(systemName: "minus.circle"))")
                                 .fontWeight(.bold)
                         }
