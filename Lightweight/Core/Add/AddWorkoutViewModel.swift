@@ -17,6 +17,7 @@ class AddWorkoutViewModel: ObservableObject {
     init() {}
     
     func save() {
+        
         let db = Firestore.firestore()
         
         guard canSave else {
@@ -37,7 +38,6 @@ class AddWorkoutViewModel: ObservableObject {
                     print("Error getting documents:\(error)")
                 }else {
                     for document in querySnapshot!.documents {
-                        print("\(document): \(document.data())")
                         db.collection("users")
                             .document(uId)
                             .collection(self.name)
@@ -53,7 +53,6 @@ class AddWorkoutViewModel: ObservableObject {
     }
     
     var canSave: Bool{
-        
         return true
     }
     
