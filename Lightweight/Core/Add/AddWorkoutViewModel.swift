@@ -46,8 +46,29 @@ class AddWorkoutViewModel: ObservableObject {
                 }
             }
         
+        // order by timestamp
+        db.collection("users").document(uId).collection(self.name).order(by: "date", descending: false)
         
         // empty add workout
+        db.collection("users")
+            .document(uId)
+            .collection("Add Workout").getDocuments() { (querySnapshot, error) in
+                if let error = error {
+                    print("Error getting documents:\(error)")
+                }else {
+                    for document in querySnapshot!.documents {
+                        let date = document.documentID
+                        
+                        db.collection("users")
+                            .document(uId)
+                            .collection("Add Workout")
+                            .document(date)
+                            .delete()
+                    }
+                }
+            }
+        
+        
         
         
     }

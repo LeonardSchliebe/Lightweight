@@ -43,8 +43,12 @@ struct Add: View {
                                 AddWorkout(AddWorkoutPresented: $viewModel.showAddWorkout)
                             }
 
-                            Text("\(Image(systemName: "minus.circle"))")
-                                .fontWeight(.bold)
+                            Button {
+                                //action - delete exercises from add workout
+                            } label: {
+                                Text("\(Image(systemName: "minus.circle"))")
+                                    .fontWeight(.bold)
+                            }
                         }
                         .multilineTextAlignment(.trailing)
                         .frame(maxWidth: .infinity, alignment: .trailing)

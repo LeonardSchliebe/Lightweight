@@ -20,6 +20,8 @@ struct AddWorkout: View {
                 .bold()
             Form {
                 TextField("Name", text: $viewModel.name)
+                    .font(.body)
+                    .multilineTextAlignment(.leading)
                 ButtonLightweight(title: "Add Workout"){
                     if viewModel.canSave {
                         viewModel.save()
