@@ -26,11 +26,9 @@
 		D7DD579C2ACB57B900685F30 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD579A2ACB57B900685F30 /* AuthenticationManager.swift */; };
 		D7DD579D2ACB57B900685F30 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD579B2ACB57B900685F30 /* AuthenticationView.swift */; };
 		D7DD579F2ACB57C800685F30 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD579E2ACB57C800685F30 /* Home.swift */; };
-		D7DD57A22ACB57E100685F30 /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD57A12ACB57E100685F30 /* Discover.swift */; };
 		D7DD57A52ACB57F200685F30 /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD57A32ACB57F200685F30 /* Add.swift */; };
 		D7DD57A62ACB57F200685F30 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD57A42ACB57F200685F30 /* AddViewModel.swift */; };
 		D7DD57A82ACB57FF00685F30 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD57A72ACB57FF00685F30 /* SettingsView.swift */; };
-		D7DD57AA2ACB580B00685F30 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD57A92ACB580B00685F30 /* ProfileView.swift */; };
 		D7DD57AC2ACB58B900685F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DD57AB2ACB58B900685F30 /* Assets.xcassets */; };
 		D7DD57AF2ACB593700685F30 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D7DD57AE2ACB593700685F30 /* FirebaseAnalytics */; };
 		D7DD57B32ACB593700685F30 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D7DD57B22ACB593700685F30 /* FirebaseAnalyticsSwift */; };
@@ -60,11 +58,9 @@
 		D7DD579A2ACB57B900685F30 /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		D7DD579B2ACB57B900685F30 /* AuthenticationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		D7DD579E2ACB57C800685F30 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		D7DD57A12ACB57E100685F30 /* Discover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Discover.swift; sourceTree = "<group>"; };
 		D7DD57A32ACB57F200685F30 /* Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
 		D7DD57A42ACB57F200685F30 /* AddViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
 		D7DD57A72ACB57FF00685F30 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		D7DD57A92ACB580B00685F30 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D7DD57AB2ACB58B900685F30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,22 +131,12 @@
 			children = (
 				D7DD57892ACB570300685F30 /* TabBar */,
 				D7DD57882ACB56F300685F30 /* Components */,
-				D7DD57872ACB56ED00685F30 /* Authentication */,
 				D7DD57862ACB56E700685F30 /* Home */,
-				D7DD57852ACB56E100685F30 /* Discover */,
 				D7DD57842ACB56D500685F30 /* Add */,
+				D7DD57872ACB56ED00685F30 /* Authentication */,
 				D7DD57832ACB56CF00685F30 /* Settings */,
-				D7DD57822ACB56BC00685F30 /* Profile */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		D7DD57822ACB56BC00685F30 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				D7DD57A92ACB580B00685F30 /* ProfileView.swift */,
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		D7DD57832ACB56CF00685F30 /* Settings */ = {
@@ -174,14 +160,6 @@
 				8F445F882AD44171006F5D45 /* AddWorkoutViewModel.swift */,
 			);
 			path = Add;
-			sourceTree = "<group>";
-		};
-		D7DD57852ACB56E100685F30 /* Discover */ = {
-			isa = PBXGroup;
-			children = (
-				D7DD57A12ACB57E100685F30 /* Discover.swift */,
-			);
-			path = Discover;
 			sourceTree = "<group>";
 		};
 		D7DD57862ACB56E700685F30 /* Home */ = {
@@ -311,7 +289,6 @@
 			files = (
 				D7DD57922ACB576000685F30 /* DisplayWorkouts.swift in Sources */,
 				D7DD57932ACB576000685F30 /* WorkoutStatView.swift in Sources */,
-				D7DD57A22ACB57E100685F30 /* Discover.swift in Sources */,
 				D7DD57A62ACB57F200685F30 /* AddViewModel.swift in Sources */,
 				8F445F892AD44171006F5D45 /* AddWorkoutViewModel.swift in Sources */,
 				D7DD57972ACB576000685F30 /* UserStatView.swift in Sources */,
@@ -319,7 +296,6 @@
 				D7DD57952ACB576000685F30 /* ButtonLightweight.swift in Sources */,
 				D7DD57942ACB576000685F30 /* AddExerciseViewModel.swift in Sources */,
 				D7DD576F2ACB553600685F30 /* LightweightApp.swift in Sources */,
-				D7DD57AA2ACB580B00685F30 /* ProfileView.swift in Sources */,
 				8F4C30332ACC85F900A4ADDD /* ExerciseItem.swift in Sources */,
 				D7DD57A82ACB57FF00685F30 /* SettingsView.swift in Sources */,
 				8F445F872AD44164006F5D45 /* AddWorkout.swift in Sources */,
@@ -464,6 +440,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lightweight/Preview Content\"";
+				DEVELOPMENT_TEAM = AR7J7FM993;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -493,6 +470,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Lightweight/Preview Content\"";
+				DEVELOPMENT_TEAM = AR7J7FM993;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

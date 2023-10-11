@@ -9,6 +9,8 @@ import SwiftUI
 import FirebaseAuth
 import FirebaseFirestoreSwift
 
+
+
 struct Add: View {
     @StateObject var viewModel = AddViewModel()
     @FirestoreQuery var exercises: [ExerciseItem]
