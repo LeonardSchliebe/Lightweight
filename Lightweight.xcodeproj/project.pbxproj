@@ -169,6 +169,7 @@
 				D7DD57982ACB57A000685F30 /* AddExercise.swift */,
 				D7DD578E2ACB576000685F30 /* AddExerciseViewModel.swift */,
 				8F4C30322ACC85F900A4ADDD /* ExerciseItem.swift */,
+				8F818F522ACF1DB800202EDC /* DisplayExercise.swift */,
 				8F445F862AD44164006F5D45 /* AddWorkout.swift */,
 				8F445F882AD44171006F5D45 /* AddWorkoutViewModel.swift */,
 			);
@@ -187,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				D7DD579E2ACB57C800685F30 /* Home.swift */,
+				D7DD578C2ACB575F00685F30 /* DisplayWorkouts.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -204,11 +206,9 @@
 			isa = PBXGroup;
 			children = (
 				D7DD578F2ACB576000685F30 /* ButtonLightweight.swift */,
-				D7DD578C2ACB575F00685F30 /* DisplayWorkouts.swift */,
 				D7DD57912ACB576000685F30 /* UserStatView.swift */,
 				D7DD578D2ACB575F00685F30 /* WorkoutStatView.swift */,
 				8F4C30342ACC8AA600A4ADDD /* Extension.swift */,
-				8F818F522ACF1DB800202EDC /* DisplayExercise.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";

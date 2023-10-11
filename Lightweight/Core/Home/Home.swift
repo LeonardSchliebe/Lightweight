@@ -8,22 +8,16 @@
 import SwiftUI
 
 struct Home: View {
+
     var body: some View {
-        
+ 
         ScrollView(showsIndicators: false){
-            
             VStack{
-                
                 DisplayWorkouts()
                 DisplayWorkouts()
                 DisplayWorkouts()
-                
             }
-            
-            
         }
-        
-        
     }
 }
 
