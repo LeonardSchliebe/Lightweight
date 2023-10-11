@@ -27,13 +27,14 @@ struct DisplayWorkouts: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
-                    NavigationLink(destination: ProfileView()){
+
                         VStack {
                             Text("\(Image(systemName: "square.and.arrow.up.circle"))").font(.largeTitle)
+                                .foregroundColor(Color("Text"))
                         }
                         .padding(.trailing)
-                    }
-                    .foregroundColor(Color("Text"))
+                    
+                    
                 }
                 ZStack {
                     Rectangle()

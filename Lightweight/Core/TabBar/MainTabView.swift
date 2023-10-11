@@ -27,18 +27,7 @@ struct MainTabView: View {
                     Image(systemName: "plus.app")
                     Text("Add")
                 }
-            
-            Discover()
-                .tabItem{
-                    Image(systemName: "magnifyingglass.circle.fill")
-                    Text("Discover")
-                }
-            
-            ProfileView()
-                .tabItem{
-                    Image(systemName: "person")
-                    Text("Profile")
-                }
+
             SettingsView(showSignInView: $showSignInView)
                 .tabItem{
                     Image(systemName: "gear")
