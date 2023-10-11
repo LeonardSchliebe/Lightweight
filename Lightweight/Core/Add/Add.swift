@@ -44,7 +44,7 @@ struct Add: View {
                             }
 
                             Button {
-                                //action - delete exercises from add workout
+                                viewModel.deleteWorkout()
                             } label: {
                                 Text("\(Image(systemName: "minus.circle"))")
                                     .fontWeight(.bold)
