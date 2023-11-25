@@ -47,8 +47,21 @@ class AddWorkoutViewModel: ObservableObject {
                             .setData(document.data())
                         
                     }
+                    let newWorkout = WorkoutItem(id:  UUID().uuidString,
+                                                 date: Date().timeIntervalSince1970,
+                                                 name: self.name)
+                    db.collection("users")
+                        .document(uId)
+                        .collection("ExistingWorkouts")
+                        .document(self.name)
+                        .setData(newWorkout.asDictionary())
+                        
+                    
                 }
             }
+
+        
+            
         
         
         // empty add workout
