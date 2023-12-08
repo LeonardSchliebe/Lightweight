@@ -2,25 +2,17 @@
 //  HomeViewModel.swift
 //  Lightweight
 //
-//  Created by Johannes Heuer-Gerstmann on 25.11.23.
+//  Created by Johannes Heuer-Gerstmann on 09.12.23.
 //
 
 import SwiftUI
-import FirebaseAuth
-import FirebaseFirestore
-import Foundation
 
-class HomeViewModel: ObservableObject {
-    func getWorkouts(userID: String) -> [WorkoutItem] {
-        let db = Firestore.firestore()
-        let docRef = db.collection("users").document(userID)
-        docRef.getDocument { (document, error) in
-          if let document = document, document.exists {
-            let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-          } else {
-            print("Document does not exist")
-          }
-        }
-        return dataDescription
+struct HomeViewModel: View {
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
+}
+
+#Preview {
+    HomeViewModel()
 }

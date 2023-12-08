@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct DisplayWorkouts: View {
+    @StateObject var viewmodel = DisplayWorkoutsViewModel()
+    let item: WorkoutItem
+    
     var body: some View {
         
         let screenHeigt = UIScreen.main.bounds.size.height
@@ -21,20 +24,12 @@ struct DisplayWorkouts: View {
             VStack{
                 HStack {
                     VStack (alignment: .leading, spacing: 2){
-                        Text("Workout X")
+                        Text(item.name)
                             .font(.title3)
                             .fontWeight(.semibold)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding()
-
-                        VStack {
-                            Text("\(Image(systemName: "square.and.arrow.up.circle"))").font(.largeTitle)
-                                .foregroundColor(Color("Text"))
-                        }
-                        .padding(.trailing)
-                    
-                    
+                    .padding([.top, .leading])
                 }
                 ZStack {
                     Rectangle()
@@ -48,18 +43,21 @@ struct DisplayWorkouts: View {
                     
                 }
                 .padding(.horizontal)
-                
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(Color("Accent"))
-                        .cornerRadius(10)
-                    
-                    Text("\(Image(systemName: "trash")) Exercise")
-                        .font(.headline)
-                        .padding()
-                    
+                Button {
+                    viewmodel.deleteWorkout(name: item.name)
+                } label:{
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color("Accent"))
+                            .cornerRadius(10)
+                        
+                        Text("\(Image(systemName: "trash")) Workout")
+                            .font(.headline)
+                            .padding()
+                        
+                    }
+                    .padding([.leading, .bottom, .trailing])
                 }
-                .padding([.leading, .bottom, .trailing])
             }
         }
         .padding(.horizontal)
@@ -69,7 +67,9 @@ struct DisplayWorkouts: View {
 
 struct DisplayWorkouts_Previews: PreviewProvider {
     static var previews: some View {
-        DisplayWorkouts()
+        DisplayWorkouts(item: WorkoutItem(id: "",
+                                          date: Date().timeIntervalSince1970,
+                                          name: ""))
     }
 }
 

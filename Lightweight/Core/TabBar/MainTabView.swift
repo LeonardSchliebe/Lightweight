@@ -16,7 +16,7 @@ struct MainTabView: View {
     
     var body: some View {
         TabView{
-            Home()
+            Home(userId: "2GmwqX33EOezLiAoPYG1qaGQ9Ar2")
                 .tabItem{
                     Image(systemName: "house")
                     Text("Home")
