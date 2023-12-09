@@ -6,10 +6,22 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseFirestoreSwift
 
 struct DisplayWorkouts: View {
     @StateObject var viewmodel = DisplayWorkoutsViewModel()
     let item: WorkoutItem
+    let userId: String
+    
+    @FirestoreQuery var exercises: [ExerciseItem]
+    
+    init(userId: String, item: WorkoutItem){
+        self.item = item
+        self.userId = userId
+        self._exercises = FirestoreQuery(collectionPath: "users/\(userId)/\(item.name)")
+        
+    }
     
     var body: some View {
         
@@ -35,12 +47,11 @@ struct DisplayWorkouts: View {
                     Rectangle()
                         .foregroundColor(Color("Accent"))
                         .cornerRadius(10)
-                        .frame(height: screenHeigt * 0.2)
-                    
-                    Text("Preview - insert background immage")
-                        .font(.headline)
-                        .padding(.horizontal)
-                    
+                    VStack{
+                        ForEach(exercises) { exercise in
+                            DisplayExerciseHome(item: exercise)
+                        }
+                    }.padding(.vertical)
                 }
                 .padding(.horizontal)
                 Button {
@@ -67,9 +78,10 @@ struct DisplayWorkouts: View {
 
 struct DisplayWorkouts_Previews: PreviewProvider {
     static var previews: some View {
-        DisplayWorkouts(item: WorkoutItem(id: "",
+        DisplayWorkouts(userId: "2GmwqX33EOezLiAoPYG1qaGQ9Ar2", 
+                        item: WorkoutItem(id: "",
                                           date: Date().timeIntervalSince1970,
-                                          name: ""))
+                                          name: "Safety"))
     }
 }
 

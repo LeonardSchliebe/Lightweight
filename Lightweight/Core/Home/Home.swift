@@ -20,7 +20,7 @@ struct Home: View {
         ScrollView(showsIndicators: false){
             VStack{
                 ForEach (workouts) { workout in
-                    DisplayWorkouts(item: workout)
+                    DisplayWorkouts(userId: "2GmwqX33EOezLiAoPYG1qaGQ9Ar2", item: workout)
                 }
             }
         }

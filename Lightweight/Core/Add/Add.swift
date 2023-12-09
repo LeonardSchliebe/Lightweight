@@ -15,6 +15,7 @@ struct Add: View {
     @StateObject var viewModel = AddViewModel()
     @FirestoreQuery var exercises: [ExerciseItem]
     let screenWidth = UIScreen.main.bounds.size.width
+
     
     init(userId: String) {
         self._exercises = FirestoreQuery(
@@ -95,7 +96,7 @@ struct Add: View {
                 }
                 .padding(.vertical)
             }
-            .padding([.leading, .bottom, .trailing])
+            .padding(.all)
         }
     }
 }
