@@ -11,7 +11,9 @@ import FirebaseFirestoreSwift
 
 struct Home: View {
     @FirestoreQuery var workouts: [WorkoutItem]
+    let userId: String
     init (userId: String) {
+        self.userId = userId
         self._workouts = FirestoreQuery(
         collectionPath: "users/\(userId)/ExistingWorkouts")
     }
@@ -20,7 +22,7 @@ struct Home: View {
         ScrollView(showsIndicators: false){
             VStack{
                 ForEach (workouts) { workout in
-                    DisplayWorkouts(userId: "2GmwqX33EOezLiAoPYG1qaGQ9Ar2", item: workout)
+                    DisplayWorkouts(userId: userId, item: workout)
                 }
             }
         }

@@ -14,8 +14,8 @@
 		8F4C30352ACC8AA600A4ADDD /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C30342ACC8AA600A4ADDD /* Extension.swift */; };
 		8F5FC1362B23713700DDEA6D /* WorkoutItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FC1352B23713700DDEA6D /* WorkoutItem.swift */; };
 		8F818F532ACF1DB800202EDC /* DisplayExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F818F522ACF1DB800202EDC /* DisplayExercise.swift */; };
-		8F8E07722B24512F00D4C0F0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E07712B24512F00D4C0F0 /* HomeViewModel.swift */; };
 		8F8E07742B24552300D4C0F0 /* DisplayWorkoutsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E07732B24552300D4C0F0 /* DisplayWorkoutsViewModel.swift */; };
+		8FB9E69E2B271D0B003D2293 /* MainTabViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB9E69D2B271D0B003D2293 /* MainTabViewViewModel.swift */; };
 		D7DD576F2ACB553600685F30 /* LightweightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DD576E2ACB553600685F30 /* LightweightApp.swift */; };
 		D7DD57762ACB553D00685F30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DD57752ACB553D00685F30 /* Preview Assets.xcassets */; };
 		D7DD577D2ACB55A200685F30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7DD577C2ACB55A100685F30 /* GoogleService-Info.plist */; };
@@ -49,8 +49,8 @@
 		8F4C30342ACC8AA600A4ADDD /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		8F5FC1352B23713700DDEA6D /* WorkoutItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutItem.swift; path = ../Add/WorkoutItem.swift; sourceTree = "<group>"; };
 		8F818F522ACF1DB800202EDC /* DisplayExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayExercise.swift; sourceTree = "<group>"; };
-		8F8E07712B24512F00D4C0F0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		8F8E07732B24552300D4C0F0 /* DisplayWorkoutsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayWorkoutsViewModel.swift; sourceTree = "<group>"; };
+		8FB9E69D2B271D0B003D2293 /* MainTabViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewViewModel.swift; sourceTree = "<group>"; };
 		D7DD576B2ACB553600685F30 /* Lightweight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lightweight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DD576E2ACB553600685F30 /* LightweightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightweightApp.swift; sourceTree = "<group>"; };
 		D7DD57752ACB553D00685F30 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -174,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				D7DD579E2ACB57C800685F30 /* Home.swift */,
-				8F8E07712B24512F00D4C0F0 /* HomeViewModel.swift */,
 				D7DD578C2ACB575F00685F30 /* DisplayWorkouts.swift */,
 				8F8E07732B24552300D4C0F0 /* DisplayWorkoutsViewModel.swift */,
 				8F5FC1352B23713700DDEA6D /* WorkoutItem.swift */,
@@ -207,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				D7DD578A2ACB572F00685F30 /* MainTabView.swift */,
+				8FB9E69D2B271D0B003D2293 /* MainTabViewViewModel.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -300,13 +300,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7DD57922ACB576000685F30 /* DisplayWorkouts.swift in Sources */,
-				8F8E07722B24512F00D4C0F0 /* HomeViewModel.swift in Sources */,
 				D7DD57932ACB576000685F30 /* WorkoutStatView.swift in Sources */,
 				D7DD57A62ACB57F200685F30 /* AddViewModel.swift in Sources */,
 				8F445F892AD44171006F5D45 /* AddWorkoutViewModel.swift in Sources */,
 				D7DD57972ACB576000685F30 /* UserStatView.swift in Sources */,
 				D7DD579C2ACB57B900685F30 /* AuthenticationManager.swift in Sources */,
 				D7DD57952ACB576000685F30 /* ButtonLightweight.swift in Sources */,
+				8FB9E69E2B271D0B003D2293 /* MainTabViewViewModel.swift in Sources */,
 				D7DD57942ACB576000685F30 /* AddExerciseViewModel.swift in Sources */,
 				D7DD576F2ACB553600685F30 /* LightweightApp.swift in Sources */,
 				8F4C30332ACC85F900A4ADDD /* ExerciseItem.swift in Sources */,

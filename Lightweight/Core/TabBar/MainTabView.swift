@@ -12,17 +12,17 @@ import FirebaseFirestore
 struct MainTabView: View {
     
     @Binding var showSignInView: Bool
-    
+    @StateObject var viewModel = MainTabViewViewModel()
     
     var body: some View {
         TabView{
-            Home(userId: "2GmwqX33EOezLiAoPYG1qaGQ9Ar2")
+            Home(userId: viewModel.getUserId())
                 .tabItem{
                     Image(systemName: "house")
                     Text("Home")
                 }
 
-            Add(userId: "2GmwqX33EOezLiAoPYG1qaGQ9Ar2")
+            Add(userId: viewModel.getUserId())
                 .tabItem{
                     Image(systemName: "plus.app")
                     Text("Add")
