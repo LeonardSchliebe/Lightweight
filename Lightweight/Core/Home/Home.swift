@@ -25,7 +25,7 @@ struct Home: View {
                     DisplayWorkouts(userId: userId, item: workout)
                 }
             }
-        }
+        }.background(Color.background)
     }
 }
 

@@ -34,6 +34,8 @@ struct Add: View {
                             .fontWeight(.semibold)
                             .multilineTextAlignment(.leading)
                             .frame(maxWidth: .infinity, alignment: .leading)
+                            .foregroundColor(Color.black)
+                        
                         
                         HStack{
                             Button {
@@ -41,6 +43,7 @@ struct Add: View {
                             } label: {
                                 Text("\(Image(systemName: "checkmark.circle"))")
                                     .fontWeight(.bold)
+                                    .foregroundColor(Color.black)
                             }
                             .sheet(isPresented: $viewModel.showAddWorkout){
                                 AddWorkout(AddWorkoutPresented: $viewModel.showAddWorkout)
@@ -51,6 +54,7 @@ struct Add: View {
                             } label: {
                                 Text("\(Image(systemName: "minus.circle"))")
                                     .fontWeight(.bold)
+                                    .foregroundColor(Color.black)
                             }
                         }
                         .multilineTextAlignment(.trailing)
@@ -97,7 +101,7 @@ struct Add: View {
                 .padding(.vertical)
             }
             .padding(.all)
-        }
+        }.background(Color.background)
     }
 }
 

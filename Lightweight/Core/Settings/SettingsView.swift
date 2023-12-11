@@ -64,67 +64,11 @@ struct SettingsView: View {
     
     var body: some View {
         ScrollView{
-            ZStack {
-                Rectangle()
-                    .foregroundColor(Color("Accent"))
-                    .cornerRadius(10)
-                
-                VStack{
-                    // Title "Profile"
-                    
-                    // Name / Stats
-                    HStack{
-                        // Name / membership stat
-                        VStack (alignment: .leading, spacing: 2){
-                            //name
-                            Text("Johannes")
-                                .font(.callout)
-                                .fontWeight(.semibold)
-                            //username
-                            Text("@Johannes")
-                                .font(.callout)
-                                .fontWeight(.light)
-                            //membership stat
-                            Text("Member Since:")
-                                .font(.callout)
-                            Text("XX/XX/XXXX")
-                                .font(.callout)
-                        }
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        
-                        // friends/workouts counter
-                        HStack{
-                            // Friends
-                            UserStatView(value:4, title:"Friends", width:60)
-                            // Workouts
-                            UserStatView(value:7, title:"Workouts", width:75)
-                            
-                        }
-                    }
-                    .padding(.horizontal)
-                    .padding(.bottom, 6)
-                    
-                    //edit profile (action button)
-                    Button {
-                        //FILL
-                    } label: {
-                        Text("Edit Profile")
-                            .font(.subheadline)
-                            .fontWeight(.semibold)
-                            .padding(.all, 5.0)
-                            .frame(maxWidth: .infinity)
-                            .foregroundColor(.black)
-                            .overlay(RoundedRectangle(cornerRadius: 6).stroke(Color.black, lineWidth: 1))
-                            .padding(.horizontal)
-                    }
-                }
-                .padding(.vertical)
-            }
-            .padding(4)
+
             
             ZStack {
                 Rectangle()
-                    .foregroundColor(Color("Accent"))
+                    .foregroundColor(Color("Accent").opacity(0.8))
                     .cornerRadius(10)
                 
                 VStack {
@@ -162,16 +106,17 @@ struct SettingsView: View {
             if showingErrorEmail{
                 Text("Invalid Email")
                     .font(.headline)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)
                     .background(Color("Accent"))
                     .cornerRadius(10)
+                    .padding(.horizontal, 4)
             }
             
             ZStack {
                 Rectangle()
-                    .foregroundColor(Color("Accent"))
+                    .foregroundColor(Color("Accent").opacity(0.8))
                     .cornerRadius(10)
                 
                 VStack{
@@ -208,17 +153,19 @@ struct SettingsView: View {
             if showingErrorPassword{
                 Text("Invalid Password")
                     .font(.headline)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)
                     .background(Color("Accent"))
                     .cornerRadius(10)
+                    .padding(.horizontal, 4)
             }
             
             ZStack {
                 Rectangle()
-                    .foregroundColor(Color("Accent"))
+                    .foregroundColor(Color("Accent").opacity(0.8))
                     .cornerRadius(10)
+                
                 
                 Button {
                     Task {
@@ -247,6 +194,7 @@ struct SettingsView: View {
                 Rectangle()
                     .foregroundColor(Color("Accent"))
                     .cornerRadius(10)
+                    .opacity(0.8)
                 
                 Button {
                     Task {
@@ -268,7 +216,7 @@ struct SettingsView: View {
                         .padding()
                 }
             }.padding(4)
-        }
+        }.background(Color.background)
     }
 }
 

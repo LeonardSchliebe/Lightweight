@@ -11,8 +11,10 @@ import FirebaseFirestore
 
 class MainTabViewViewModel: ObservableObject {
     func getUserId() -> String {
-        let uId = (Auth.auth().currentUser?.uid)!
-        
+        guard let uId = Auth.auth().currentUser?.uid else { return "2GmwqX33EOezLiAoPYG1qaGQ9Ar2" }
+
         return uId
+        
+        
     }
 }
